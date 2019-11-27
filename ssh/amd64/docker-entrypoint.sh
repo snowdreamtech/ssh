@@ -6,6 +6,7 @@ echo "root:$SSH_PASSWORD" | chpasswd
 
 # start sshd
 nohup /usr/sbin/sshd -D > /dev/null 2>&1 &
+# /usr/sbin/sshd -D
 
 # wait
 wait

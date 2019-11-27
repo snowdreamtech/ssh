@@ -8,6 +8,13 @@ ENV SSH_PASSWORD=root
 
 RUN apk add --no-cache openssl ca-certificates openssh \ 
     && sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config \
+    # && sed -i "s/Subsystem sftp.*/Subsystem sftp internal-sftp/g" /etc/ssh/sshd_config \
+    # && echo -e "Match User root" >>  /etc/ssh/sshd_config \
+    # && echo -e "\tX11Forwarding no" >>  /etc/ssh/sshd_config \
+    # && echo -e "\tAllowTcpForwarding no" >>  /etc/ssh/sshd_config \
+    # && echo -e "\tPermitTTY no" >>  /etc/ssh/sshd_config \
+    # && echo -e "\tForceCommand internal-sftp" >>  /etc/ssh/sshd_config \
+    # && echo -e "\tChrootDirectory %h" >>  /etc/ssh/sshd_config \
     && ssh-keygen -A \
     && rm -rf /tmp/* /var/cache/apk/*
 
