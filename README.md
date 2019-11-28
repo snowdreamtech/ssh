@@ -42,7 +42,7 @@ snowdream <sn0wdr1am@icloud.com>
 
 ssh:
 
-[amd64](https://cloud.docker.com/u/snowdreamtechamd64/repository/docker/snowdreamtechamd64/ssh), [arm32v6](https://cloud.docker.com/u/snowdreamtecharm32v6/repository/docker/snowdreamtecharm32v6/ssh), [arm32v7](https://cloud.docker.com/u/snowdreamtecharm32v7/repository/docker/snowdreamtecharm32v7/ssh), [arm64v8](https://cloud.docker.com/u/snowdreamtecharm64v8/repository/docker/snowdreamtecharm64v8/ssh), [i386](https://cloud.docker.com/u/snowdreamtechi386/repository/docker/snowdreamtechi386/ssh)
+[amd64](https://hub.docker.com/repository/docker/snowdreamtechamd64/ssh), [arm32v6](https://hub.docker.com/repository/docker/snowdreamtecharm32v6/ssh), [arm32v7](https://hub.docker.com/repository/docker/snowdreamtecharm32v7/ssh), [arm64v8](https://hub.docker.com/repository/docker/snowdreamtecharm64v8/ssh), [i386](https://hub.docker.com/repository/docker/snowdreamtechi386/ssh)
 
 - Supported Tags:
   [ssh](https://cloud.docker.com/u/snowdreamtech/repository/docker/snowdreamtech/ssh/tags)
