@@ -6,6 +6,7 @@ ENV SSH_PASSWORD=root
 
 RUN apk add --no-cache openssl ca-certificates openssh \ 
     && sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config \
+    && sed -i "s/Subsystem.*/Subsystem\tsftp\tinternal-sftp/g" /etc/ssh/sshd_config \ 
     && sed -i "s/#MaxAuthTries.*/MaxAuthTries 3/g" /etc/ssh/sshd_config \
     && sed -i "s/#ClientAliveInterval.*/ClientAliveInterval 900/g" /etc/ssh/sshd_config \
     && sed -i "s/#ClientAliveCountMax.*/ClientAliveCountMax 3/g" /etc/ssh/sshd_config \
