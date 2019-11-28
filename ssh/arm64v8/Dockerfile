@@ -8,6 +8,11 @@ ENV SSH_PASSWORD=root
 
 RUN apk add --no-cache openssl ca-certificates openssh \ 
     && sed -i "s/#PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config \
+    && sed -i "s/#MaxAuthTries.*/MaxAuthTries 3/g" /etc/ssh/sshd_config \
+    && sed -i "s/#ClientAliveInterval.*/ClientAliveInterval 900/g" /etc/ssh/sshd_config \
+    && sed -i "s/#ClientAliveCountMax.*/ClientAliveCountMax 3/g" /etc/ssh/sshd_config \
+    && sed -i "s/#SyslogFacility.*/SyslogFacility AUTH/g" /etc/ssh/sshd_config \
+    && sed -i "s/#LogLevel.*/LogLevel INFO/g" /etc/ssh/sshd_config \
     && ssh-keygen -A \
     && rm -rf /tmp/* /var/cache/apk/*
 

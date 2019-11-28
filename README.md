@@ -20,6 +20,14 @@ Default Environment:
 docker run --name ssh --rm -p 2222:22 -e SSH_PASSWORD=root snowdreamtech/ssh
 ```
 
+Export
+
+- SSH_PASSWORD=root
+
+```bash
+docker run --name ssh --rm -p 2222:22 -e SSH_PASSWORD=root -v /etc/ssh/sshd_config:/etc/ssh/sshd_config: -v /root/.ssh:/root/.ssh snowdreamtech/ssh
+```
+
 ## Quick reference
 
 - Where to file issues:
